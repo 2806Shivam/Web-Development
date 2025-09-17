@@ -1,40 +1,97 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #f4f4f9);
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
+/* Container */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
 }
 
+.container:hover {
+    transform: translateY(-3px);
+}
+
+/* Heading */
 h2 {
     text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #222;
+    letter-spacing: 1px;
 }
 
+/* Form Layout */
 form {
     display: flex;
     flex-direction: column;
+    gap: 18px;
 }
 
-form input, form select, form button {
-    margin-bottom: 15px;
-    padding: 10px;
+/* Inputs & Selects */
+form input, 
+form select, 
+form textarea {
+    padding: 12px 14px;
     font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    transition: all 0.3s ease;
 }
 
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Button */
 button {
-    background-color: #007BFF;
-    color: white;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #fff;
+    padding: 12px;
+    font-size: 17px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    box-shadow: 0px 4px 10px rgba(0, 91, 187, 0.3);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    button {
+        font-size: 16px;
+    }
 }
